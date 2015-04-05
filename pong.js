@@ -1,7 +1,7 @@
 // create canvas
 var canvas    		= document.createElement("canvas");
 var ctx 	  		= canvas.getContext("2d");
-canvas.id 	  		= "pang_table";
+canvas.id 	  		= "pong_table";
 canvas.width  		= 512;
 canvas.height 		= 380;
 canvas.style.border = "3px solid #365B84";
@@ -83,13 +83,13 @@ var update = function () {
 	ball.y += ball.speed_y;
 	
 	//LOGICS
-	// pang player1 
+	// pong player1 
 	// TODO: change speed a little when hit
 	if ((ball.x <= 26) && (ball.y >= player1.y) && (ball.y <= (player1.y + 52))) {
 		ball.speed_x *= -1;		
 		console.log("hit");
 	}
-	// pang player2
+	// pong player2
 	// TODO: change speed a little when hit
 	if ((ball.x >= 486) && (ball.y >= player2.y) && (ball.y <= (player2.y + 52))) {
 		ball.speed_x *= -1;
